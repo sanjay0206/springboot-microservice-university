@@ -1,0 +1,94 @@
+version: '3.8'
+
+services:
+  mysql_db:
+    container_name: mysql-container
+    image: mysql
+    environment:
+      MYSQL_USER: mysql_user
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: java@2021
+      MYSQL_DATABASE: university
+    ports:
+      - "3308:3306"
+    volumes:
+      - mysqldata:/var/lib/mysql
+    networks:
+      - my-network
+
+  eureka-server:
+    container_name: eureka-server-container
+    image: eureka-server-image
+    build:
+      context: ./eureka-server
+      dockerfile: Dockerfile
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8761:8761"
+    networks:
+      - my-network
+
+  api-gateway:
+    container_name: api-gateway-container
+    image: api-gateway-image
+    build:
+      context: ./api-gateway
+      dockerfile: Dockerfile
+    ports:
+      - "9090:9090"
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    depends_on:
+      - eureka-server
+    networks:
+      - my-network
+
+  student-service:
+    container_name: student-service-container
+    image: student-service-image
+    build:
+      context: ./student-service
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      DATABASE_URL: jdbc:mysql://mysql_db:3306/university
+      DATABASE_USERNAME: mysql_user
+      DATABASE_PASSWORD: java@2021
+      EUREKA.INSTANCE.PREFER-IP-ADDRESS: true
+      SPRING_PROFILES_ACTIVE: docker
+    depends_on:
+      - mysql_db
+      - eureka-server
+      - api-gateway
+    networks:
+      - my-network
+
+  address-service:
+    container_name: address-service-container
+    image: address-service-image
+    build:
+      context: ./address-service
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    environment:
+      DATABASE_URL: jdbc:mysql://mysql_db:3306/university
+      DATABASE_USERNAME: mysql_user
+      DATABASE_PASSWORD: java@2021
+      EUREKA.INSTANCE.PREFER-IP-ADDRESS: true
+      SPRING_PROFILES_ACTIVE: docker
+    depends_on:
+      - mysql_db
+      - eureka-server
+      - api-gateway
+    networks:
+      - my-network
+
+volumes:
+  mysqldata: {}
+
+networks:
+  my-network:
+    driver: bridge
