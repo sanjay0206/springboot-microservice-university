@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
+import org.springframework.cloud.gateway.support.ServerWebExchangeUtils;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;
@@ -18,14 +19,8 @@ public class CustomFilter implements GlobalFilter {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        logger.info("Inside GatewayFilterChain");
 
         ServerHttpRequest request = exchange.getRequest();
-
-//        if (request.getURI().toString().contains("/api/student/")) {
-//
-//        }
-
         logger.info("Authorization = " + request.getHeaders().getFirst("Authorization"));
 
         return chain.filter(exchange).then(Mono.fromRunnable(() -> {
