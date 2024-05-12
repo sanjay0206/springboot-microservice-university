@@ -38,6 +38,7 @@ services:
     ports:
       - "9090:9090"
     environment:
+      EUREKA.INSTANCE.PREFER-IP-ADDRESS: true
       SPRING_PROFILES_ACTIVE: docker
     depends_on:
       - eureka-server
@@ -86,6 +87,14 @@ services:
     networks:
       - my-network
 
+  zipkin:
+    container_name: zipkin-container
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - my-network
+      -
 volumes:
   mysqldata: {}
 
