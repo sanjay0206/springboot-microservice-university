@@ -2,34 +2,34 @@ package com.infybuzz.response;
 
 public class AddressResponse {
 
-	private long addressId;
+    private long addressId;
 
-	private String street;
+    private String street;
 
-	private String city;
+    private String city;
 
-	public long getAddressId() {
-		return addressId;
-	}
+    public long getAddressId() {
+        return addressId;
+    }
 
-	public void setAddressId(long addressId) {
-		this.addressId = addressId;
-	}
+    public void setAddressId(long addressId) {
+        this.addressId = addressId;
+    }
 
-	public String getStreet() {
-		return street;
-	}
+    public String getStreet() {
+        return street;
+    }
 
-	public void setStreet(String street) {
-		this.street = street;
-	}
+    public void setStreet(String street) {
+        this.street = street;
+    }
 
-	public String getCity() {
-		return city;
-	}
+    public String getCity() {
+        return city;
+    }
 
-	public void setCity(String city) {
-		this.city = city;
-	}
+    public void setCity(String city) {
+        this.city = city;
+    }
 
 }

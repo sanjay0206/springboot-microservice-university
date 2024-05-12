@@ -18,21 +18,21 @@ import org.springframework.web.reactive.function.client.WebClient;
 @EnableFeignClients("com.infybuzz.feignclients")
 @EnableEurekaClient
 public class StudentServiceApplication {
-	
-	@Value("${address.service.url}")
-	private String addressServiceUrl;
 
-	public static void main(String[] args) {
-		SpringApplication.run(StudentServiceApplication.class, args);
-	}
-	
-	@Bean
-	public WebClient webClient () {
-		WebClient webClient = WebClient.builder()
-				.baseUrl(addressServiceUrl)
-				.build();
+    @Value("${address.service.url}")
+    private String addressServiceUrl;
 
-		return webClient;
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(StudentServiceApplication.class, args);
+    }
+
+    @Bean
+    public WebClient webClient() {
+        WebClient webClient = WebClient.builder()
+                .baseUrl(addressServiceUrl)
+                .build();
+
+        return webClient;
+    }
 
 }

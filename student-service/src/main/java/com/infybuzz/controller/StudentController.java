@@ -15,18 +15,18 @@ import com.infybuzz.service.StudentService;
 @RestController
 @RequestMapping("/api/student")
 public class StudentController {
-	
-	@Autowired
-	StudentService studentService;
-	
-	@PostMapping("/create")
-	public StudentResponse createStudent (@RequestBody CreateStudentRequest createStudentRequest) {
-		return studentService.createStudent(createStudentRequest);
-	}
-	
-	@GetMapping("getById/{id}")
-	public StudentResponse getById (@PathVariable long id) {
-		return studentService.getById(id);
-	}
-	
+
+    @Autowired
+    StudentService studentService;
+
+    @PostMapping("/create")
+    public StudentResponse createStudent(@RequestBody CreateStudentRequest createStudentRequest) {
+        return studentService.createStudent(createStudentRequest);
+    }
+
+    @GetMapping("getById/{id}")
+    public StudentResponse getById(@PathVariable long id) {
+        return studentService.getById(id);
+    }
+
 }

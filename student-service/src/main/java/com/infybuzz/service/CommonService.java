@@ -21,14 +21,14 @@ public class CommonService {
     AddressFeignClient addressFeignClient;
 
     @CircuitBreaker(name = "addressService", fallbackMethod = "fallbackGetAddressById")
-    public AddressResponse getAddressById (long addressId) {
+    public AddressResponse getAddressById(long addressId) {
         logger.info("count = " + count);
         count++;
 
         return addressFeignClient.getById(addressId);
     }
 
-    public AddressResponse fallbackGetAddressById (long addressId, Throwable th) {
+    public AddressResponse fallbackGetAddressById(long addressId, Throwable th) {
         logger.error("Error = " + th.getMessage());
         return new AddressResponse();
     }

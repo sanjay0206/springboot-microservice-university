@@ -18,56 +18,56 @@ import reactor.core.publisher.Mono;
 
 @Service
 public class StudentService {
-	Logger logger = LoggerFactory.getLogger(StudentService.class);
+    Logger logger = LoggerFactory.getLogger(StudentService.class);
 
-	@Autowired
-	StudentRepository studentRepository;
-	
-	@Autowired
-	WebClient webClient;
+    @Autowired
+    StudentRepository studentRepository;
 
-	/*@Autowired
-	AddressFeignClient addressFeignClient;*/
-	@Autowired
-	CommonService commonService;
+    @Autowired
+    WebClient webClient;
+
+    /*@Autowired
+    AddressFeignClient addressFeignClient;*/
+    @Autowired
+    CommonService commonService;
 
 
-	public StudentResponse createStudent(CreateStudentRequest createStudentRequest) {
-		logger.error("Inside createStudent = " + createStudentRequest);
+    public StudentResponse createStudent(CreateStudentRequest createStudentRequest) {
+        logger.error("Inside createStudent = " + createStudentRequest);
 
-		Student student = new Student();
-		student.setFirstName(createStudentRequest.getFirstName());
-		student.setLastName(createStudentRequest.getLastName());
-		student.setEmail(createStudentRequest.getEmail());
-		
-		student.setAddressId(createStudentRequest.getAddressId());
-		student = studentRepository.save(student);
-		
-		StudentResponse studentResponse = new StudentResponse(student);
+        Student student = new Student();
+        student.setFirstName(createStudentRequest.getFirstName());
+        student.setLastName(createStudentRequest.getLastName());
+        student.setEmail(createStudentRequest.getEmail());
 
-		// AddressResponse addressResponse = getAddressById(student.getAddressId());
-		// AddressResponse addressResponse = addressFeignClient.getById(student.getAddressId());
-		AddressResponse addressResponse = commonService.getAddressById(student.getAddressId());
-		studentResponse.setAddressResponse(addressResponse);
+        student.setAddressId(createStudentRequest.getAddressId());
+        student = studentRepository.save(student);
 
-		return studentResponse;
-	}
-	
-	public StudentResponse getById (long id) {
-		logger.info("Inside getById = " + id);
+        StudentResponse studentResponse = new StudentResponse(student);
 
-		Student student = studentRepository.findById(id).get();
-		StudentResponse studentResponse = new StudentResponse(student);
+        // AddressResponse addressResponse = getAddressById(student.getAddressId());
+        // AddressResponse addressResponse = addressFeignClient.getById(student.getAddressId());
+        AddressResponse addressResponse = commonService.getAddressById(student.getAddressId());
+        studentResponse.setAddressResponse(addressResponse);
 
-		// AddressResponse addressResponse = getAddressById(student.getAddressId());
-		// AddressResponse addressResponse = addressFeignClient.getById(student.getAddressId());
-		AddressResponse addressResponse = commonService.getAddressById(student.getAddressId());
-		studentResponse.setAddressResponse(addressResponse);
-		
-		return studentResponse;
-	}
+        return studentResponse;
+    }
 
-	// Resilient4j internally uses Spring AOP so here if we use it won't work
+    public StudentResponse getById(long id) {
+        logger.info("Inside getById = " + id);
+
+        Student student = studentRepository.findById(id).get();
+        StudentResponse studentResponse = new StudentResponse(student);
+
+        // AddressResponse addressResponse = getAddressById(student.getAddressId());
+        // AddressResponse addressResponse = addressFeignClient.getById(student.getAddressId());
+        AddressResponse addressResponse = commonService.getAddressById(student.getAddressId());
+        studentResponse.setAddressResponse(addressResponse);
+
+        return studentResponse;
+    }
+
+    // Resilient4j internally uses Spring AOP so here if we use it won't work
 /*	@CircuitBreaker(name = "addressService", fallbackMethod = "fallbackGetAddressById")
 	public AddressResponse getAddressById (long addressId) {
 
