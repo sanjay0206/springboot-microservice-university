@@ -28,20 +28,12 @@ public class StudentService {
 
 	/*@Autowired
 	AddressFeignClient addressFeignClient;*/
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 98acbe0 (first commit)
 	@Autowired
 	CommonService commonService;
 
 
 	public StudentResponse createStudent(CreateStudentRequest createStudentRequest) {
-<<<<<<< HEAD
 		logger.error("Inside createStudent = " + createStudentRequest);
-=======
->>>>>>> 98acbe0 (first commit)
 
 		Student student = new Student();
 		student.setFirstName(createStudentRequest.getFirstName());
@@ -62,11 +54,8 @@ public class StudentService {
 	}
 	
 	public StudentResponse getById (long id) {
-<<<<<<< HEAD
 		logger.info("Inside getById = " + id);
 
-=======
->>>>>>> 98acbe0 (first commit)
 		Student student = studentRepository.findById(id).get();
 		StudentResponse studentResponse = new StudentResponse(student);
 
