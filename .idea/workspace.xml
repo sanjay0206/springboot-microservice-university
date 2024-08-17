@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="062aa787-9ce7-4469-9b2f-e6d773d6a6b9" name="Changes" comment="new commit">
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/infybuzz/app/RateLimiterConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/university-micro-app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/address-service/src/main/java/com/infybuzz/controller/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/address-service/src/main/java/com/infybuzz/controller/AddressController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/infybuzz/app/CustomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/infybuzz/app/CustomFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application-docker.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/app/StudentServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/app/StudentServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/feignclients/AddrSerLoadBalConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/feignclients/AddrSerLoadBalConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/feignclients/AddressFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/feignclients/AddressFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student-service/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/src/main/resources/application-docker.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +147,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716284567724</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="new commit">
+      <option name="closed" value="true" />
+      <created>1723908511940</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723908511941</updated>
+    </task>
+    <task id="LOCAL-00003" summary="new commit">
+      <option name="closed" value="true" />
+      <created>1723908656558</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723908656558</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
