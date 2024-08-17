@@ -145,8 +145,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ConfigServerApplication" />
         <item itemvalue="Application.EurekaServerApplication" />
+        <item itemvalue="Application.ConfigServerApplication" />
         <item itemvalue="Application.AddressServiceApplication" />
         <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.StudentServiceApplication" />

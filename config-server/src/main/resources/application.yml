@@ -13,7 +13,7 @@
 #          search-locations: classpath:/configurations
 
 server:
-  port: 8889
+  port: 8888
 
 spring:
   application:
