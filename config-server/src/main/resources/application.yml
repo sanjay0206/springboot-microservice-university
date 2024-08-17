@@ -16,6 +16,8 @@ server:
   port: 8889
 
 spring:
+  profiles:
+    active: default
   application:
     name: config-server
   cloud:
@@ -25,4 +27,4 @@ spring:
           uri: https://github.com/sanjay0206/university-config-server.git
           search-paths: configurations
           clone-on-start: true
-          default-label: main
+          default-label: master
