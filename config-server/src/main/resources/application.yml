@@ -16,8 +16,6 @@ server:
   port: 8889
 
 spring:
-  profiles:
-    active: default
   application:
     name: config-server
   cloud:
