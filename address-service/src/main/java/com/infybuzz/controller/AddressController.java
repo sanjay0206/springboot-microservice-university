@@ -13,7 +13,7 @@ import com.infybuzz.response.AddressResponse;
 import com.infybuzz.service.AddressService;
 
 @RestController
-@RequestMapping("/api/address")
+@RequestMapping(value = "/api/address")
 public class AddressController {
 
 	@Autowired

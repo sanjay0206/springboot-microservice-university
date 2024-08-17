@@ -28,6 +28,7 @@ public class StudentService {
 
     /*@Autowired
     AddressFeignClient addressFeignClient;*/
+
     @Autowired
     CommonService commonService;
 
@@ -73,7 +74,8 @@ public class StudentService {
 
 		// REST Call using Web Client
 		*//*	Mono<AddressResponse> addressResponse =
-				webClient.get().uri("/getById/" + addressId)
+				webClient.get()
+				        .uri("/getById/" + addressId)
 						.retrieve()
 						.bodyToMono(AddressResponse.class);
 

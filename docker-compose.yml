@@ -23,7 +23,7 @@ services:
       context: ./eureka-server
       dockerfile: Dockerfile
     environment:
-      SPRING_PROFILES_ACTIVE: docker
+      spring_profile_active: docker
     ports:
       - "8761:8761"
     networks:
@@ -38,8 +38,8 @@ services:
     ports:
       - "9090:9090"
     environment:
-      EUREKA.INSTANCE.PREFER-IP-ADDRESS: true
-      SPRING_PROFILES_ACTIVE: docker
+      eureka.instance.prefer-ip-address: true
+      spring_profile_active: docker
     depends_on:
       - eureka-server
     networks:
@@ -57,8 +57,8 @@ services:
       DATABASE_URL: jdbc:mysql://mysql_db:3306/university
       DATABASE_USERNAME: mysql_user
       DATABASE_PASSWORD: java@2021
-      EUREKA.INSTANCE.PREFER-IP-ADDRESS: true
-      SPRING_PROFILES_ACTIVE: docker
+      eureka.instance.prefer-ip-address: true
+      spring_profile_active: docker
     depends_on:
       - mysql_db
       - eureka-server
@@ -78,12 +78,20 @@ services:
       DATABASE_URL: jdbc:mysql://mysql_db:3306/university
       DATABASE_USERNAME: mysql_user
       DATABASE_PASSWORD: java@2021
-      EUREKA.INSTANCE.PREFER-IP-ADDRESS: true
-      SPRING_PROFILES_ACTIVE: docker
+      eureka.instance.prefer-ip-address: true
+      spring_profile_active: docker
     depends_on:
       - mysql_db
       - eureka-server
       - api-gateway
+    networks:
+      - my-network
+
+  redis:
+    container_name: redis-container
+    image: redis:alpine
+    ports:
+      - "6379:6379"
     networks:
       - my-network
 
