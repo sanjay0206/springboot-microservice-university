@@ -28,11 +28,10 @@ public class StudentServiceApplication {
 
     @Bean
     public WebClient webClient() {
-        WebClient webClient = WebClient.builder()
+
+        return WebClient.builder()
                 .baseUrl(addressServiceUrl)
                 .build();
-
-        return webClient;
     }
 
 }

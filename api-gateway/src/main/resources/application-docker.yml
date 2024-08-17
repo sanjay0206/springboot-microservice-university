@@ -1,33 +1,6 @@
 spring:
-  redis:
-    host: localhost
-    port: 6379
+  application:
+    name: api-gateway
 
-  cloud:
-    gateway:
-      routes:
-        - id: student
-          uri: lb://student-service
-          predicates:
-            - Path=/api/student/**
-          filters:
-            - name: RequestRateLimiter
-              args:
-                redis-rate-limiter.replenishRate: 5
-                redis-rate-limiter.burstCapacity: 10
-                redis-rate-limiter.requestedTokens: 1
-
-        - id: address
-          uri: lb://address-service
-          predicates:
-            - Path=/api/address/**
-          filters:
-            - name: RequestRateLimiter
-              args:
-                redis-rate-limiter.replenishRate: 5
-                redis-rate-limiter.burstCapacity: 10
-                redis-rate-limiter.requestedTokens: 1
-
-logging:
-  level:
-    org.springframework.data.redis: DEBUG
+  config:
+    import: optional:configserver:http://localhost:8888

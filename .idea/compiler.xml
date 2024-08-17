@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
         <module name="student-service" />
+        <module name="config-server" />
         <module name="address-service" />
         <module name="eureka-server" />
       </profile>
@@ -17,6 +18,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="address-service" options="-parameters" />
       <module name="api-gateway" options="-parameters" />
+      <module name="config-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="student-service" options="-parameters" />
     </option>
