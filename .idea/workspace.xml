@@ -4,7 +4,60 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="062aa787-9ce7-4469-9b2f-e6d773d6a6b9" name="Changes" comment="new commit" />
+    <list default="true" id="062aa787-9ce7-4469-9b2f-e6d773d6a6b9" name="Changes" comment="new commit">
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address-service/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/address-service/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/address-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address-service/src/main/java/com/infybuzz/app/AddressServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/address-service/src/main/java/com/infybuzz/app/AddressServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address-service/src/main/java/com/infybuzz/controller/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/address-service/src/main/java/com/infybuzz/controller/AddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address-service/src/main/java/com/infybuzz/entity/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/address-service/src/main/java/com/infybuzz/entity/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address-service/src/main/java/com/infybuzz/repository/AddressRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/address-service/src/main/java/com/infybuzz/repository/AddressRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address-service/src/main/java/com/infybuzz/request/CreateAddressRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/address-service/src/main/java/com/infybuzz/request/CreateAddressRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address-service/src/main/java/com/infybuzz/response/AddressResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/address-service/src/main/java/com/infybuzz/response/AddressResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address-service/src/main/java/com/infybuzz/service/AddressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/address-service/src/main/java/com/infybuzz/service/AddressService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address-service/src/main/resources/application-docker.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/address-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/address-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address-service/src/test/java/com/infybuzz/app/AddressServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/address-service/src/test/java/com/infybuzz/app/AddressServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/infybuzz/app/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/infybuzz/app/ApiGatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/infybuzz/app/CustomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/infybuzz/app/CustomFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/infybuzz/app/RateLimiterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/infybuzz/app/RateLimiterConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application-docker.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application-docker.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/java/com/infybuzz/app/ConfigServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/java/com/infybuzz/app/ConfigServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/application-docker.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/address-service-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/address-service-docker.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/address-service.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/address-service.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/api-gateway-docker.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/api-gateway-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/api-gateway-docker.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/api-gateway.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/api-gateway.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/api-gateway.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/eureka-server-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/eureka-server-docker.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/eureka-server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/eureka-server.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/student-service-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/student-service-docker.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/student-service.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/student-service.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application-docker.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/app/StudentServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/app/StudentServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/feignclients/AddrSerLoadBalConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/external/AddrSerLoadBalancer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/feignclients/AddressFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/external/client/AddressFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/repository/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/request/CreateStudentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/request/CreateStudentRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/response/AddressResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/response/AddressResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/response/StudentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/response/StudentResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/service/CommonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/service/CommonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/src/main/java/com/infybuzz/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/resources/application-docker.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/student-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/student-service/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +73,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sanjay0206&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sanjay0206/springboot-university-microservice.git&quot;,
+    &quot;accountId&quot;: &quot;00ffbc33-4835-4abf-bbbc-9fed3d10e4d0&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -41,9 +106,10 @@
     "Application.Unnamed.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/sanja/eclipse-workspace/springboot-microservice-university/universty-microservice-app-docker",
+    "last_opened_file_path": "C:/Users/sanja/sts-workplace/springboot-microservice-university/university-microservice-app",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2"
@@ -57,6 +123,9 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\sanja\eclipse-workspace\springboot-microservice-university\university-microservice-app\config-server\src\main\resources\configurations" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.infybuzz.external.client" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -141,22 +210,13 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ConfigServerApplication" />
-        <item itemvalue="Application.EurekaServerApplication" />
-        <item itemvalue="Application.AddressServiceApplication" />
         <item itemvalue="Application.ApiGatewayApplication" />
+        <item itemvalue="Application.EurekaServerApplication" />
+        <item itemvalue="Application.ConfigServerApplication" />
+        <item itemvalue="Application.AddressServiceApplication" />
         <item itemvalue="Application.StudentServiceApplication" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-ae57be32" />
-        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
-        <option value="jdk-22-openjdk-22-3183f394aec4-bad0321e" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -247,7 +307,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723926182752</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="new commit">
+      <option name="closed" value="true" />
+      <created>1723926524969</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1723926524969</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

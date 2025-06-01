@@ -11,6 +11,7 @@ import java.util.Objects;
 
 @Configuration
 public class RateLimiterConfig {
+
     Logger logger = LoggerFactory.getLogger(RateLimiterConfig.class);
 
     @Bean
@@ -18,9 +19,8 @@ public class RateLimiterConfig {
         return exchange -> {
 
             String hostAddress = Objects.requireNonNull(exchange.getRequest().getRemoteAddress()).getAddress().getHostAddress();
-            logger.info("Host address = " + hostAddress);
+            logger.info("Host address = {}", hostAddress);
             return Mono.just(hostAddress);
         };
     }
-
 }

@@ -1,47 +1,68 @@
-#spring:
-#  application:
-#    name: api-gateway
-#
-#  redis:
-#    host: localhost
-#    port: 6379
-#
-#  cloud:
-#    gateway:
-#      routes:
-#        - id: student
-#          uri: lb://student-service
-#          predicates:
-#            - Path=/api/student/**
-#          filters:
-#            - name: RequestRateLimiter
+server:
+  port: 9090
+
+spring:
+  application:
+    name: api-gateway
+
+  redis:
+    host: localhost
+    port: 6379
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+      routes:
+        - id: student
+          uri: lb://student-service
+          predicates:
+            - Path=/api/student/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 5
+                redis-rate-limiter.burstCapacity: 10
+                redis-rate-limiter.requestedTokens: 1
+
+        - id: address
+          uri: lb://address-service
+          predicates:
+            - Path=/api/address/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 5
+                redis-rate-limiter.burstCapacity: 10
+                redis-rate-limiter.requestedTokens: 1
+#            - RewritePath=/address-service/(?<remaining>.*), /${remaining}
+#            - name: StripPrefix
 #              args:
-#                redis-rate-limiter.replenishRate: 5
-#                redis-rate-limiter.burstCapacity: 10
-#                redis-rate-limiter.requestedTokens: 1
-#
-#        - id: address
-#          uri: lb://address-service
-#          predicates:
-#            - Path=/api/address/**
-#          filters:
-#            - name: RequestRateLimiter
-#              args:
-#                redis-rate-limiter.replenishRate: 5
-#                redis-rate-limiter.burstCapacity: 10
-#                redis-rate-limiter.requestedTokens: 1
-##            - RewritePath=/address-service/(?<remaining>.*), /${remaining}
-##            - name: StripPrefix
-##              args:
-##                parts: 1
-#
-#logging:
-#  level:
-#    org.springframework.data.redis: DEBUG
-#
-#
-## - Redis replenishRate: The number of requests allowed per second for the endpoint.
-## - Redis burstCapacity: Maximum number of requests allowed in a short burst before sending a 429 (Too Many Requests) status code.
-## - Redis requestedTokens: The number of tokens a single request will consume from the available token bucket.
-## - RewritePath: Can be used to modify the incoming path before routing.
-## - StripPrefix: Used to remove a prefix from the incoming path before routing.
+#                parts: 1
+
+  sleuth:
+    reactor:
+      instrumentation-type: decorate-on-each
+  zipkin:
+    base-url: http://localhost:9411
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+
+logging:
+  level:
+    org.springframework.data.redis: DEBUG
+
+
+# - Redis replenishRate: The number of requests allowed per second for the endpoint.
+# - Redis burstCapacity: Maximum number of requests allowed in a short burst before sending a 429 (Too Many Requests) status code.
+# - Redis requestedTokens: The number of tokens a single request will consume from the available token bucket.
+# - RewritePath: Can be used to modify the incoming path before routing.
+# - StripPrefix: Used to remove a prefix from the incoming path before routing.

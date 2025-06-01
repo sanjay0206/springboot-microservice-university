@@ -19,14 +19,11 @@ public class CustomFilter implements GlobalFilter {
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 
         ServerHttpRequest request = exchange.getRequest();
-
-        logger.info("Authorization = " + request.getHeaders().getFirst("Authorization"));
+        logger.info("Authorization = {}", request.getHeaders().getFirst("Authorization"));
 
         return chain.filter(exchange).then(Mono.fromRunnable(() -> {
             ServerHttpResponse response = exchange.getResponse();
-
-            logger.info("Post Filter = " + response.getStatusCode());
+            logger.info("Post Filter = {}", response.getStatusCode());
         }));
     }
-
 }

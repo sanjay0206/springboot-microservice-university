@@ -26,7 +26,3 @@ spring:
           search-paths: configurations
           clone-on-start: true
           default-label: docker
-#
-#logging:
-#  level:
-#    org.springframework: DEBUG

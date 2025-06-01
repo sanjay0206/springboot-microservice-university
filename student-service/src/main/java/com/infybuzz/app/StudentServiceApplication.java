@@ -12,10 +12,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.reactive.function.client.WebClient;
 
 @SpringBootApplication
-@ComponentScan({"com.infybuzz.controller", "com.infybuzz.service", "com.infybuzz.fallbacks"})
+@ComponentScan({"com.infybuzz.controller", "com.infybuzz.service",  "com.infybuzz.request", "com.infybuzz.response"})
 @EntityScan("com.infybuzz.entity")
 @EnableJpaRepositories("com.infybuzz.repository")
-@EnableFeignClients("com.infybuzz.feignclients")
+@EnableFeignClients("com.infybuzz.external")
 @EnableEurekaClient
 public class StudentServiceApplication {
 
@@ -33,5 +33,4 @@ public class StudentServiceApplication {
                 .baseUrl(addressServiceUrl)
                 .build();
     }
-
 }
